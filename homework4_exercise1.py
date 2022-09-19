@@ -9,10 +9,10 @@ Select operation: '''
 
     # take input from the menu
     user_choice = int(input(menu))
-
+    number2 = float(input('Enter second number: '))
     # check if user choice is one of the five options
     if user_choice in range(1, 6):
-        number2 = float(input('Enter second number: '))
+
         if user_choice == 1:
             result = number1 + number2
         elif user_choice == 2:
@@ -31,3 +31,5 @@ Select operation: '''
 # Error info
 except ValueError:
     print("Do not enter letters or symbols(except dot). Please, restart the program and enter NUMBER")
+except ZeroDivisionError:
+    print("You can't divide by zero")
